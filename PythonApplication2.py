@@ -138,6 +138,7 @@ class Heart:
     def render(self, render_canvas, render_frame):
         for x, y, size in self.all_points[render_frame % self.generate_frame]:
             render_canvas.create_rectangle(x, y, x + size, y + size, width=0, fill=HEART_COLOR)
+        render_canvas.create_text(320, 250, text="Minh", font=("Arial", 24), fill="white")
 
 
 def draw(main: Tk, render_canvas: Canvas, render_heart: Heart, render_frame=0):
